@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百家樂助手</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>百家樂助手</h1>
+    
+    <!-- 記錄結果 -->
+    <div class="results">
+        <h3>記錄結果</h3>
+        <button onclick="recordResult('莊')">莊家勝</button>
+        <button onclick="recordResult('閒')">閒家勝</button>
+        <button onclick="recordResult('和')">和局</button>
+    </div>
+
+    <!-- 統計數據 -->
+    <div class="statistics">
+        <h3>統計數據</h3>
+        <p>莊家：<span id="bankerCount">0</span></p>
+        <p>閒家：<span id="playerCount">0</span></p>
+        <p>和局：<span id="tieCount">0</span></p>
+    </div>
+
+    <!-- 歷史記錄 -->
+    <table>
+        <thead>
+            <tr>
+                <th>局數</th>
+                <th>結果</th>
+            </tr>
+        </thead>
+        <tbody id="historyTable">
+        </tbody>
+    </table>
+
+    <!-- 下注建議 -->
+    <div class="suggestion">
+        <h3>下一局建議</h3>
+        <p id="nextBet">等待記錄結果...</p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
